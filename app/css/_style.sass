@@ -1,0 +1,708 @@
+$font-default:  'Satura Text Pro Regular'
+
+.clear
+	clear: both
+
+header
+	width: 100% 
+	background: url("../images/bg_header.jpg") #09172e bottom center no-repeat
+	.header-top
+		width: 100%
+		min-height: 57px
+		nav.nav-head-top 
+			ul
+				display: flex
+				justify-content: flex-start
+				li 
+					a 
+						display: block
+						margin-right: 20px
+						padding: 27px 0 22px 0
+						font-family: helvetica
+						font-weight: 600
+						font-size: 10px
+						text-decoration: none
+						color: #777e85
+						&:hover
+							color: #fff
+							text-decoration: underline
+					a.active
+						color: #fff	
+						&:hover
+							text-decoration: none
+		nav.nav-right
+			float: right
+			ul
+				li 
+					text-align: right
+					a
+						color: #fff204
+						&:hover
+							color: #fff
+							text-decoration: none
+					a.login
+						color: #fff
+						&:hover
+							color: #fff204					
+		.logo-container			
+			text-align: center
+			.img-logo
+				height: 38px
+				width: 38px	
+				margin-top: 8px		
+	.header-bottom
+		width: 100%
+		min-height: 36px
+		.header-bottom-container
+			display: flex
+			justify-content: space-between
+			.menu-container
+				width: 760px
+				nav.main-menu
+					ul
+						display: flex
+						justify-content: flex-end
+						li
+							a 
+								display: block
+								margin-right: 40px
+								font-family: $font-default
+								font-size: 18px
+								font-weight: 400
+								text-decoration: none
+								color: #fff
+								line-height: 36px 
+								&:hover
+									color: 	#fff204	
+							a.active
+								color: 	#fff204	
+			.widget-container		
+				nav.menu-widget
+					ul
+						display: flex
+						li
+							a 
+								display: block
+								margin-right: 12px							
+								line-height: 36px
+								margin-top: 5px
+							a.shopping-cart
+								height: 20px
+								width: 20px 
+								background: url('../images/sprite-common.png') 0 -981px	
+							a.search
+								height: 23px
+								width: 23px
+								background: url('../images/sprite-common.png') 0 -1216px
+.breadcrumb
+	background: url(../images/divider-l-up.png) bottom center no-repeat
+	nav.nav-breadcrumb
+		padding: 30px 0 30px 0
+		ul
+			display: flex
+			justify-content: flex-start	
+			li 
+				a 
+					display: block
+					padding: 0 5px 0 5px 
+					text-transform: uppercase
+					font-family: helvetica
+					font-size: 10px
+					line-height: 14px 
+					text-decoration: none
+					color: #9f9f9f
+					padding-right: 10px
+					&:after
+						content: url(../images/breadcrumb-arrow.png) 
+						padding-left: 10px	
+				&:last-child
+					a
+						color: #3fb0e8
+						&:after
+							content: ""
+				a.home
+					height: 14px
+					width: 14px 					
+					background-image: url(../images/breadcrumb-home.png) 
+					background-size: 14px 14px
+					background-repeat: no-repeat
+					padding-right: 34px
+					&:after
+						padding-left: 24px
+
+section#main
+	min-height: 300px
+	.figure-product
+		width: 500px
+		float: left
+	.product-choice
+		padding-top: 50px
+		float: right
+		width: 482px
+		box-sizing: border-box
+		.title
+			h1
+				font-family: $font-default
+				font-weight: 500
+				font-size: 48px
+				color: #4D4D4D
+				float: left
+			a.share 
+				display: block
+				color: #78bb2e
+				font-family: helvetica
+				text-decoration: none
+				font-size: 10px
+				float: right
+				margin-top: 20px
+				font-weight: bold
+				i
+					font-size: 10px 
+					font-weight: lighter
+					margin-right: 3px
+		.color-choice
+			margin-top: 4px
+			h5
+				font-family: helvetica
+				font-weight: bold
+				font-size: 10px
+				color: #4d4d4d
+			.colors
+				margin-top: 5px
+	.prices
+		margin-top: 40px
+		.price-container
+			width : 230px
+			height: 150px
+			border: 1px solid transparent
+			font-family: helvetica
+			color: #f01f81
+			padding: 19px
+			box-sizing: border-box
+			float: left
+		.price-title
+			font-size: 10px
+			font-weight: bold
+		.price
+			padding-top: 6px
+			font-size: 30px
+			font-weight: bold
+			float: left
+		.price-desc
+			float: left
+			margin-top: 13px
+			margin-left: 9px
+			font-size: 8px
+			font-weight: bold
+			line-height: 12px
+		.price-taksit
+			border-color: #f01f81
+			margin-right: 20px 
+			button
+				margin-top: 26px
+		.price-pesin
+			border-color: #e5e5e5
+			.price-title
+				color: #9d9d9d
+			.price
+				color: #4D4D4D
+			.price-desc
+				text-align: left
+				padding-top: 10px
+				color: #4d4d4d
+			.price-stroke
+				font-size: 12px
+				text-decoration: line-through
+				margin-top: 4px
+				font-family: helvetica	
+				color: #9d9d9d			
+			button
+				margin-top: 12px
+				text-align: center
+				img
+					float: left
+					text-align: right
+					margin-left: 25px
+				p
+					float: left
+					text-align: left
+					margin-left: 5px
+	.product-info-1
+		width: 230px
+		margin-right: 20px
+		margin-top: 10px	
+		float: left					
+	.product-info-2
+		margin-top: 9px
+		width: 230px
+		float: left
+		text-align: center
+		font-size: 12px
+		font-family: helvetica
+		font-weight: bold
+		color: #3fb0e8
+	.infoes		
+		display: flex
+		justify-content: center
+		margin-top: 40px
+		.info
+			text-align: center
+			text-transform: uppercase
+			font-family: helvetica
+			font-weight: bold
+			font-size: 12px
+			line-height: 16px
+			color: #4d4d4d
+			margin-right: 30px
+			text-align: center
+			p 
+				margin-top: 6px
+
+section#section-tab
+	margin-top: 52px
+	padding-bottom: 40px
+	.tabs
+		width: 984px
+		height: 125px 
+		background: url(../images/tab-bg.png)  bottom center no-repeat
+		display: flex
+		justify-content: flex-start
+		border-top: 1px solid #e8e8e8
+		.tab-space
+			width: 50px
+		.tab-title	
+			font-size: 24px
+			font-family: $font-default
+			width: 190px
+			height: 100%
+			text-align: center
+			padding-top: 76px
+			box-sizing: border-box
+			cursor: pointer
+			color: #4d4d4d
+			font-weight: 400
+		.active
+			background-color: #fff
+			color: #44afe8
+		.divider
+			background: url(../images/tab-divider.png)
+			height: 125px
+			width: 1px
+	.login
+		width: 560px
+		margin: 0 auto
+		font-family: $font-default
+		font-size: 20px
+		padding-top: 40px
+		color: #4d4d4d
+		p
+			width: 447px
+			text-align: right
+			float: left
+		button
+			float: right
+			width: 94px 
+			height: 48px			
+
+
+section#filter
+	.container
+		border-top: 1px solid #e5e5e5
+		padding-top: 48px
+	.filter
+		font-family: helvetica
+		img 
+			float: left
+			width: 10px
+			height: 10px
+		p
+			float: left
+			font-size: 10px
+			font-weight: bold
+			color: #9d9d9d
+			margin-left: 7px
+		.range-value
+			margin-top: 14px
+			color: #4d4d4d
+			font-weight: bold
+			.label-range
+				background-color: transparent
+				border: none
+				font-size: 24px
+				min-width: 100px
+				max-width: 130px
+				color: #4d4d4d
+				font-weight: bold
+			span
+				font-size: 10px
+		.range
+			margin-top: 10px
+
+section#filter-result
+	margin-top: 62px
+	.accordion
+		margin-bottom: 80px
+	.title
+		.title-icon
+			float: left
+		.title-h
+			float: left
+			margin-left: 25px
+		.title-desc
+			float: right
+			display: flex
+			justify-content: flex-start
+			.fiyat
+				font-family: helvetica
+				font-weight: bold
+				font-size: 30px
+				color: #4d4d4d
+			.taksit
+				font-size: 10px
+				line-height: 14px
+				margin-left: 6px
+				span
+					color: #3fb0e8
+	table.packages
+		margin-top: 61px
+		thead
+			border-bottom: 1px solid #ececed
+		tr 
+			th
+				a 
+					display: block
+					position: relative
+					padding: 10px 0 0 17px
+					font-family: helvetica
+					font-weight: bold
+					font-size: 10px
+					color: #a7a5a8				
+					cursor: pointer
+					text-align: left
+					padding-left: 24px
+					padding-bottom: 6px
+					text-decoration: none
+					&:before
+						content: ""
+						position: absolute
+						height: 20px
+						width: 20px
+						left: 0
+						top: 50%
+						margin-top: -10px
+						background: url('../images/sprite-common.png') 0 -1057px no-repeat
+					&:after
+						content: ""
+						position: absolute
+						height: 20px
+						width: 20px
+						right: 0px
+						top: 50%
+						margin-top: -2px
+						background: url('../images/icons/icon-arrow-down.png')  no-repeat
+			th.active
+				background-color: #4d4d4d
+				a 
+					color: #fff !important
+			th.th-paket
+				width: 190px
+				padding-left: 27px
+				a
+					&:before
+						background-position: 0 -1057px 
+			th.th-internet
+				width: 112px
+				a
+					&:before
+						background-position: 0 -959px
+			th.th-ses
+				width: 95px
+				a
+					&:before
+						background-position: -77px -981px
+			th.th-ek-faydalar
+				width: 140px
+				a 
+					&:before
+						background: url('../images/icons/icon-benefit.png')  no-repeat
+			th.th-tarife
+				width: 130px
+				a	
+					&:before
+						background-position: -20px -1030px
+			th.th-cihaz
+				width: 125px
+				a
+					&:before
+						background-position: -20px -1030px
+			th.th-toplam
+				width: 142px
+				a
+					&:before
+						background-position: -40px -919px
+			th.th-sepet
+				width: 90px
+				a
+					&:before
+						background: none
+		tr.content
+			border-bottom: 1px solid #e5e5e5
+			&:last-child
+				border: none
+			td
+				vertical-align: middle
+				text-align: center
+				font-family: $font-default
+				font-weight: bold
+				color: #474343
+			td.name
+				font-size: 26px			
+			td.voice, td.internet,	td.tarife, td.cihaz, td.total
+				font-size: 26px
+				text-align: center
+				span.amount
+					font-size: 26px
+				span.type
+					font-size: 10px
+				p.scope
+					font-size: 10px
+					margin-top: 5px
+					color: #b69ca6
+			td.cihaz
+				div.teklif
+					margin-right: 20px
+			td.cihaz, td.total, td.sepet
+				div.teklif
+					height: 30px
+					padding: 22px 0 22px 0
+					border-bottom: 1px dashed #ebebeb
+					&:last-child
+						border: none
+			td.sepet
+				button.btn
+					width: 46px 
+					height: 45px 
+					margin-top: -2px
+					
+section#oneri
+	margin-top: 103px
+	.title
+		h1
+			font-family: $font-default
+			font-size: 34px 
+			color: #4d4d4d
+			text-align: center
+			font-weight: bold
+	.slider-oneri
+		.slide
+			font-family: $font-default
+			text-align: center
+			.desc
+				font-size: 20px
+				color: #4b4b4b
+				margin-top: 14px
+			.desc-2
+				font-size: 14px
+				padding-top: 12px
+				color: #888585
+			.price
+				font-size: 20px
+				color: #3fb0e8
+				margin-top: 31px
+				span				
+					font-size: 11px
+
+section#kampanyalar
+	background-color: #f2f2f2
+	margin-top: 152px
+	box-sizing: border-box
+	padding: 60px 0 75px 0
+	text-align: center
+	h1
+		text-align: center
+		font-size: 36px
+		font-family: $font-default
+		color: #4d4d4d
+	.kampanya
+		margin-top: 93px
+		padding-right: 9px
+		border-right: 1px solid #e5e5e5
+		.kampanya-title
+			font-family: $font-default
+			font-weight: bold
+			font-size: 25px
+			color: #4b4b4b
+			margin-top: 17px
+		.kampanya-desc
+			font-family: helvetica
+			font-weight: bold
+			font-size: 12px
+			line-height: 15px
+			color: #8b8785
+			margin-top: 21px
+		button
+			width: 74px
+			margin-top: 25px
+
+
+section#yardim
+	background-color:  #f7ae3a
+	padding: 60px 0 160px 0
+	h1
+		text-align: center
+		font-size: 36px
+		font-family: $font-default
+		color: #fff
+	.sorular
+		ul
+			li 
+				a
+					display: block
+					margin-top: 14px
+					color: #fff 
+					text-decoration: none
+					font-family: helvetica
+					font-size: 12px
+					font-weight: bold
+					i 
+						margin-right: 8px
+	.search	
+		position: relative
+		width: 352px
+		height: 55px
+		margin: 54px auto auto auto
+		.txt-search
+			position: absolute
+			width: 100%
+			height: 100%
+			font-size: 24px
+			font-family: helvetica
+			background-size: 15px 15px
+			float: left
+			border: none
+			background-color: #f6f6f6
+			box-shadow: 0px 1px 2px #a5a19b inset
+			text-outline: none			
+		i
+			position: absolute
+			right: 12px
+			font-size: 20px
+			top: 50%
+			transform: translate(-50%, -50%)
+			color: #9a9a9a
+			cursor: pointer
+	.small
+		padding-right: 5px
+		border-right: 1px solid #f37d1f
+		margin-top: 45px
+	.center
+		padding-left: 15px
+
+footer
+	width: 100%
+	background-color: #0c1f3d	
+	.footer-top-right
+		position: relative
+		float: right
+		.daire-1
+			position: absolute
+			height: 220px
+			width: 220px
+			border-radius: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			right: 0px
+			background: #0c1f3d
+			z-index: 1
+		.daire-2
+			position: absolute
+			background: #0c1f3d
+			height: 120px
+			width: 120px
+			border-radius: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			right: -50px
+			z-index: 1
+		.social-media
+			position: absolute
+			z-index: 9999
+			width: 350px
+			right: 10px
+			ul
+				display: flex
+				justify-content: center
+				li
+					position: relative
+					top: -50%
+					transform: translate(50%, -50%)
+					a 
+						display: block
+						background: url(../images/sprite-common.png)
+						height: 39px
+						width: 39px
+						margin-right: 15px 
+					a.facebook
+						background-position: -39px -1867px
+					a.twitter
+						background-position: -38px -1633px
+					a.google
+						background-position: 0 -1828px
+					a.youtube
+						background-position: 0 -1711px
+					a.rss
+						background-position: -39px -1672px																	
+	#footer-items
+		display: flex
+		justify-content: space-between
+		padding-top: 85px
+		position: relative
+		z-index: 999
+		.item
+			h1
+				font-family: $font-default
+				font-size: 22px
+				font-weight: bold
+				color: #fff
+			ul
+				li
+					a
+						display: block
+						color: #ccdffc
+						font-family: helvetica
+						font-size: 12px
+						font-weight: bold
+						margin-bottom: 15px
+						text-decoration: none
+						line-height: 16px
+						&:hover
+							color: #fff
+							text-decoration: underline
+					&:first-child
+						margin-top: 44px
+		
+	#footer-middle
+		border-top: 1px solid #221D39
+		padding: 60px 0 57px
+		margin-top: 58px
+		background: url(../images/bg_shadow_footer.jpg) top center no-repeat
+	#footer-bottom
+		background: #0b1a31
+		padding: 35px 0 35px 0
+		border-size: box-border
+		ul
+			display: flex
+			justify-content: space-between
+			li
+				color: #ccdffc
+				text-decoration: #fff
+				font-family: helvetica
+				font-size: 12px
+				a
+					color: #ccdffc
+					text-decoration: #fff
+					font-size: 14px
+					text-decoration: none
+					&:hover
+						color: #fff
+						text-decoration: underline

@@ -1,0 +1,6 @@
+@font-face {
+font-family: 'Satura Text Pro Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Satura Text Pro Regular'), url('SaturaTextPro-Regular.woff') format('woff');
+}
