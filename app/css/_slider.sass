@@ -1,7 +1,23 @@
 .slider-container
 	width: 504px
+	.slide-effect
+		position: relative
+		#image-large-front
+			position: relative
+			z-index: 2
+		#image-large-back
+			position: absolute
+			z-index: 4
+			left: 0
+			top: 0
+			display: none
+		.image-firsat
+			position: absolute
+			top: 50px
+			left: 3px
+			z-index: 5
 	.items-container
-		height: 300px
+		height: 325px
 		width: 50px
 		overflow: hidden
 		padding: 0
@@ -13,13 +29,26 @@
 			position: absolute
 			z-index: 1
 			height: 250px
-			top: 22px
+			top: 26px
 			li
 				padding: 1px
 				width: 45px
 				height: 50px
 				border: 1px solid #e7e7e7
 				list-style: none
+				background-size: cover
+				cursor: pointer
+				position: relative
+				.thumb-div
+					position: absolute
+					top: 0
+					left: 0
+					z-index: 999
+					background:  rgba(238,238,238,.7)
+					height: 100%
+					width: 100%
+				.thumb-div-active
+					background: rgba(238,238,238, 0)
 			img
 				width: 100%
 				height: 100%
@@ -44,12 +73,13 @@
 			bottom: 0px
 			background-color: #fff
 			border: 1px solid #f8f8f8
-			color: #c5c5c5s
+			color: #c5c5c5
 			text-align: center
 			line-height: 25px		
 			z-index: 2
 		.active
 			color: #4c4c4c
+			cursor: pointer
 	.image-container
 		width: 472px
 		height: 450px 

@@ -7,29 +7,67 @@
 
 		var  position=$('.slider-container ul').position();
 
+		
+	
+
 		$('.up').click(function(){
+			if ($('.up').attr("data")!= "false") {
+
 				position=$('.slider-container ul').position();
 				degisken=position.top;
-				degisken+=250;
+				degisken+=268;
 
 				$( ".slider-container ul" ).animate({
 				  top: degisken + "px"
-				}, 1500 );
+				}, 500 );
+
+				$(this).removeClass('active');
+				$('.down').addClass('active');
+
+				$('.down').attr("data",true);
+				$('.up').attr("data",false);
+			}
 		});
 
 		$('.down').click(function(){
-			var  position=$('.slider-container ul').position();
-			degisken=position.top;
-			degisken-=250;
+			if ($('.down').attr("data")!= "false") {
+				var  position=$('.slider-container ul').position();
+				degisken=position.top;
+				degisken-=268;
 
-			$( ".slider-container ul" ).animate({
-			  top: degisken + "px"
-			}, 1500 );
+				$( ".slider-container ul" ).animate({
+				  top: degisken + "px"
+				}, 500 );
+
+				$(this).removeClass('active');
+				$('.up').addClass('active');
+
+				$('.down').attr("data",false);
+				$('.up').attr("data",true);
+			}
 		});		
 
-		$('.slider-container ul li img').click(function(){
-			var a= $(this).prop('src');
-			$(".img-product-large").attr("src", a)
+
+
+		$('.thumb-div').click(function(event) {
+
+			var imageId=$(this).attr("data-id");
+
+			var imagePath= $("#" + imageId).prop('src');
+
+
+			$("#image-large-back").attr("src", imagePath);
+			$("#image-large-back").fadeTo( 500, 1.0 );
+
+
+			setTimeout(function(){
+  				$("#image-large-back").fadeTo( 100, 0 );
+  				$("#image-large-front").attr("src", imagePath);
+			}, 300);
+
+			
+			$('.thumb-div').removeClass("thumb-div-active");
+			$(this).addClass("thumb-div-active");
 
 		});
 		/* product detail slider end */
@@ -141,5 +179,7 @@
 		  $("#saniye").html(event.strftime('%S'));
 		});
 		/*coutdown end*/
+
+
 
 	});

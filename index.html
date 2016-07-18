@@ -134,21 +134,53 @@
 					<div class="slider-container">
 
 						<div class="items-container">
-							<div class="up"><i class="fa fa-chevron-up"></i></div>
-							<div class="down active"><i class="fa fa-chevron-down"></i></div>
+							<div class="up" data="false"><i class="fa fa-chevron-up"></i></div>
+							<div class="down active" data="true"><i class="fa fa-chevron-down"></i></div>
 							<ul>
 								
-								<li><img src="dist/images/product/iphone3.jpg" alt="Thumb"></li>
-								<li><img src="dist/images/product/iphone2.jpg" alt="Thumb"></li>
-								<li><img src="dist/images/product/iphone3.jpg" alt="Thumb"></li>
-								<li><img src="dist/images/product/iphone2.jpg" alt="Thumb"></li>
-								<li><img src="dist/images/product/iphone3.jpg" alt="Thumb"></li>
-								<li><img src="dist/images/product/iphone2.jpg" alt="Thumb"></li>	
+								<li>
+									<img id="image-1" src="dist/images/product/iphone3.jpg" alt="Thumb">
+									<div class="thumb-div thumb-div-active"  data-id="image-1"></div>
+								</li>
+
+								<li>
+									<img id="image-2" src="dist/images/product/iphone2.jpg" alt="Thumb">
+									<div class="thumb-div"  data-id="image-2"></div>
+								</li>
+
+								<li>
+									<img id="image-3" src="dist/images/product/iphone5.jpg" alt="Thumb">
+									<div class="thumb-div"  data-id="image-3"></div>
+								</li>									
+
+								<li>
+									<img id="image-7" src="dist/images/product/iphone8.jpg" alt="Thumb">
+									<div class="thumb-div"  data-id="image-7"></div>
+								</li>	
+
+								<li>
+									<img id="image-4" src="dist/images/product/iphone4.jpg" alt="Thumb">
+									<div class="thumb-div"  data-id="image-4"></div>
+								</li>
+
+								<li>
+									<img id="image-5" src="dist/images/product/iphone6.jpg" alt="Thumb">
+									<div class="thumb-div"  data-id="image-5"></div>
+								</li>
+
+								<li>
+									<img id="image-6" src="dist/images/product/iphone7.jpg" alt="Thumb">
+									<div class="thumb-div"  data-id="image-6"></div>
+								</li>	
 							</ul>
 						</div>
 
 						<div class="image-container">
-							<img class="img-product-large" src="dist/images/product/iphone3.jpg" alt="" >
+							<div class="slide-effect" >
+								<img class="image-firsat" src="dist/images/firsat.png" alt=" ">
+								<img id="image-large-front" class="img-product-large" src="dist/images/product/iphone3.jpg" alt="" >
+								<img id="image-large-back" class="img-product-large" src="dist/images/product/iphone2.jpg" alt="" >
+							</div>
 							<div class="banner">
 								<img src="dist/images/product/badge_4g.png" alt="Product Big İmage">
 							</div>
@@ -162,7 +194,17 @@
 
 				<div class="product-choice">
 					<div class="title">
-						<h1>iPHONE 6S 16GB</h1> <a href="#" class="share"><i class="fa fa-share-alt"></i> PAYLAŞ</a>
+						<h1>iPHONE 6S 16GB</h1> 
+						<a  href="#" class="share">
+							<i class="fa fa-share-alt"></i> PAYLAŞ
+							<div class="share-hover">
+								<ul>
+									<li class="facebook"></li>
+									<li class="twitter"></li>
+									<li class="google"></li>
+								</ul>
+							</div>
+						</a>
 						<div class="clear"></div>
 					</div>
 					
@@ -193,6 +235,9 @@
 							<button class="btn btn-primary"> Tekliflere Gözat</button>
 						</div>
 						<div class="price-container price-pesin">
+							<div class="ribbon">
+								<p>SON 13 ADET</p>
+							</div>
 							<p class="price-title">KDV DAHİL (PEŞİN)</p>
 							<p class="price">2,199</p>
 							<p class="price-desc">TL (KDV Dahil)</p>

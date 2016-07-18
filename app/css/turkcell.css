@@ -17,8 +17,24 @@
 
 .slider-container {
   width: 504px; }
+  .slider-container .slide-effect {
+    position: relative; }
+    .slider-container .slide-effect #image-large-front {
+      position: relative;
+      z-index: 2; }
+    .slider-container .slide-effect #image-large-back {
+      position: absolute;
+      z-index: 4;
+      left: 0;
+      top: 0;
+      display: none; }
+    .slider-container .slide-effect .image-firsat {
+      position: absolute;
+      top: 50px;
+      left: 3px;
+      z-index: 5; }
   .slider-container .items-container {
-    height: 300px;
+    height: 325px;
     width: 50px;
     overflow: hidden;
     padding: 0;
@@ -30,13 +46,26 @@
       position: absolute;
       z-index: 1;
       height: 250px;
-      top: 22px; }
+      top: 26px; }
       .slider-container .items-container ul li {
         padding: 1px;
         width: 45px;
         height: 50px;
         border: 1px solid #e7e7e7;
-        list-style: none; }
+        list-style: none;
+        background-size: cover;
+        cursor: pointer;
+        position: relative; }
+        .slider-container .items-container ul li .thumb-div {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 999;
+          background: rgba(238, 238, 238, 0.7);
+          height: 100%;
+          width: 100%; }
+        .slider-container .items-container ul li .thumb-div-active {
+          background: rgba(238, 238, 238, 0); }
       .slider-container .items-container ul img {
         width: 100%;
         height: 100%;
@@ -61,12 +90,13 @@
       bottom: 0px;
       background-color: #fff;
       border: 1px solid #f8f8f8;
-      color: #c5c5c5s;
+      color: #c5c5c5;
       text-align: center;
       line-height: 25px;
       z-index: 2; }
     .slider-container .items-container .active {
-      color: #4c4c4c; }
+      color: #4c4c4c;
+      cursor: pointer; }
   .slider-container .image-container {
     width: 472px;
     height: 450px;
@@ -433,6 +463,7 @@ header {
         padding: 0 5px 0 5px;
         text-transform: uppercase;
         font-family: helvetica;
+        font-weight: bold;
         font-size: 10px;
         line-height: 14px;
         text-decoration: none;
@@ -472,6 +503,7 @@ section#main {
       color: #4D4D4D;
       float: left; }
     section#main .product-choice .title a.share {
+      position: relative;
       display: block;
       color: #78bb2e;
       font-family: helvetica;
@@ -480,6 +512,24 @@ section#main {
       float: right;
       margin-top: 20px;
       font-weight: bold; }
+      section#main .product-choice .title a.share:hover .share-hover {
+        opacity: 1; }
+      section#main .product-choice .title a.share .share-hover {
+        position: absolute;
+        right: -45px;
+        top: -10px;
+        opacity: 0; }
+      section#main .product-choice .title a.share li {
+        background: url(../images/sprite-common.png);
+        height: 39px;
+        width: 39px;
+        margin-bottom: 10px; }
+      section#main .product-choice .title a.share li.facebook {
+        background-position: -39px -1867px; }
+      section#main .product-choice .title a.share li.twitter {
+        background-position: -38px -1633px; }
+      section#main .product-choice .title a.share li.google {
+        background-position: 0 -1828px; }
       section#main .product-choice .title a.share i {
         font-size: 10px;
         font-weight: lighter;
@@ -525,7 +575,26 @@ section#main {
       section#main .prices .price-taksit button {
         margin-top: 26px; }
     section#main .prices .price-pesin {
-      border-color: #e5e5e5; }
+      border-color: #e5e5e5;
+      position: relative; }
+      section#main .prices .price-pesin .ribbon {
+        position: absolute;
+        right: -10px;
+        top: 0;
+        width: 102px;
+        height: 102px;
+        background: url(../images/ribbon.png) center no-repeat; }
+        section#main .prices .price-pesin .ribbon p {
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+          text-align: center;
+          margin-top: 36px;
+          margin-left: 15px;
+          font-size: 12px;
+          font-family: helvetica;
+          font-weight: bold;
+          color: #4d4d4d; }
       section#main .prices .price-pesin .price-title {
         color: #9d9d9d; }
       section#main .prices .price-pesin .price {
@@ -613,6 +682,8 @@ section#section-tab {
       cursor: pointer;
       color: #4d4d4d;
       font-weight: 400; }
+      section#section-tab .tabs .tab-title:hover {
+        color: #44afe8; }
     section#section-tab .tabs .active {
       background-color: #fff;
       color: #44afe8; }

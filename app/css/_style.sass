@@ -107,6 +107,7 @@ header
 					padding: 0 5px 0 5px 
 					text-transform: uppercase
 					font-family: helvetica
+					font-weight: bold
 					font-size: 10px
 					line-height: 14px 
 					text-decoration: none
@@ -148,6 +149,7 @@ section#main
 				color: #4D4D4D
 				float: left
 			a.share 
+				position: relative
 				display: block
 				color: #78bb2e
 				font-family: helvetica
@@ -156,6 +158,25 @@ section#main
 				float: right
 				margin-top: 20px
 				font-weight: bold
+				&:hover
+					.share-hover
+						opacity: 1
+				.share-hover
+					position: absolute
+					right: -45px
+					top: -10px
+					opacity: 0
+				li
+					background: url(../images/sprite-common.png)
+					height: 39px
+					width: 39px
+					margin-bottom: 10px
+				li.facebook
+					background-position: -39px -1867px
+				li.twitter
+					background-position: -38px -1633px
+				li.google
+					background-position: 0 -1828px					
 				i
 					font-size: 10px 
 					font-weight: lighter
@@ -202,6 +223,23 @@ section#main
 				margin-top: 26px
 		.price-pesin
 			border-color: #e5e5e5
+			position: relative
+			.ribbon
+				position: absolute
+				right: -10px
+				top: 0
+				width: 102px
+				height: 102px
+				background: url(../images/ribbon.png) center no-repeat
+				p
+					transform: rotate(45deg)
+					text-align: center
+					margin-top: 36px
+					margin-left: 15px
+					font-size: 12px
+					font-family: helvetica
+					font-weight: bold
+					color: #4d4d4d
 			.price-title
 				color: #9d9d9d
 			.price
@@ -281,6 +319,8 @@ section#section-tab
 			cursor: pointer
 			color: #4d4d4d
 			font-weight: 400
+			&:hover
+				color: #44afe8
 		.active
 			background-color: #fff
 			color: #44afe8
